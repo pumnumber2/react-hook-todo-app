@@ -3,12 +3,11 @@ import { Paper, List, Divider } from '@material-ui/core';
 import Todo from './Todo';
 ; const TodoList = ({ list, removeItem, toggleTodo, updateTodo }) => {
   const taskListComponent = (list || []).map((item, i) => {
-    const { id: taskID, name: taskName, completed } = item;
     return (
       <Fragment>
         <Todo
           {...item}
-          key={taskID}
+          key={item.id}
           removeTodo={removeItem}
           toggleTodo={toggleTodo}
           updateTodo={updateTodo}
