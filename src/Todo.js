@@ -4,7 +4,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import toggleHook from './useToggleState';
 import EditTodoForm from './EditTodoForm';
-const Todo = ({ id, task, completed, removeTodo, toggleTodo, updateTodo }) => {
+const Todo = ({ id, name: task, completed, removeTodo, toggleTodo, updateTodo }) => {
   const [isEditing, toggle] = toggleHook();
   return (
     <ListItem style={{ height: '64px' }}>

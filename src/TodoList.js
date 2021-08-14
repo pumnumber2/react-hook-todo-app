@@ -7,10 +7,8 @@ import Todo from './Todo';
     return (
       <Fragment>
         <Todo
-          id={taskID}
-          task={taskName}
+          {...item}
           key={taskID}
-          completed={completed}
           removeTodo={removeItem}
           toggleTodo={toggleTodo}
           updateTodo={updateTodo}
