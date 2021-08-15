@@ -1,4 +1,4 @@
-import { fade } from "@material-ui/core/styles/colorManipulator";
+import { alpha } from "@material-ui/core/styles/colorManipulator";
 const styles = (theme) => ({
   root: {
     width: '100%',
@@ -13,6 +13,7 @@ const styles = (theme) => ({
   },
   title: {
     display: 'none',
+    textTransform: 'capitalize',
     [theme.breakpoints.up('sm')]: {
       display: 'block'
     },
@@ -20,9 +21,9 @@ const styles = (theme) => ({
   search: {
     position: "relative",
     borderRaius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
     width: '100%',

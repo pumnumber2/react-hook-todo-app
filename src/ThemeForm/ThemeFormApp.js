@@ -1,18 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 import NavBar from './NavBar';
 import ThemeForm from './ThemeForm';
 import PageContent from './PageContent';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 
-export default class ThemeFormApp extends Component {
-  render() {
-    return (
-      <ThemeProvider>
-        <PageContent>
+const ThemeFormApp = () => {
+  return (
+    <ThemeProvider>
+      <PageContent>
+        <LanguageProvider>
           <NavBar />
           <ThemeForm />
-        </PageContent>
-      </ThemeProvider>
-    )
-  }
-}
+        </LanguageProvider>
+      </PageContent>
+    </ThemeProvider>
+  );
+};
+
+export default ThemeFormApp;
