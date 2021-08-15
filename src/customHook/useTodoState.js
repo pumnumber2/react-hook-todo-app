@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import UUID from 'uuid';
+import localStorageStateHook from './useLocalStorageState';
 const useTodoState = (initialValue) => {
-  const [todoList, setTodoList] = useState(initialValue);
+  const [todoList, setTodoList] = localStorageStateHook('todos', initialValue);
   // Add todo in list.
   const addTodo = (text) => {
     setTodoList([...todoList, { id: UUID(), name: text, completed: false }]);

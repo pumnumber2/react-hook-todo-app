@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { ListItem, ListItemText, Checkbox, IconButton, ListItemSecondaryAction } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import toggleHook from './useToggleState';
+import toggleHook from '../customHook/useToggleState';
 import EditTodoForm from './EditTodoForm';
 const Todo = ({ id, name: task, completed, removeTodo, toggleTodo, updateTodo }) => {
   const [isEditing, toggle] = toggleHook();

@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextField, Paper } from '@material-ui/core';
-import textInputHook from './useInputState';
+import textInputHook from '../customHook/useInputState';
 
 const TodoForm = ({ addItem }) => {
   const [value, handleChange, reset] = textInputHook();

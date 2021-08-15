@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextField } from '@material-ui/core';
-import textInputHook from './useInputState';
+import textInputHook from '../customHook/useInputState';
 const EditTodoForm = ({ name, updateTodo, toggle, id }) => {
   const [value, handleChange, reset] = textInputHook(name);
   const submitNewName = (e) => {

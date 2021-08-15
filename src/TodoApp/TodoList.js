@@ -4,10 +4,10 @@ import Todo from './Todo';
 ; const TodoList = ({ list, removeItem, toggleTodo, updateTodo }) => {
   const taskListComponent = (list || []).map((item, i) => {
     return (
-      <Fragment>
+      <Fragment key={item.id}>
         <Todo
-          {...item}
           key={item.id}
+          {...item}
           removeTodo={removeItem}
           toggleTodo={toggleTodo}
           updateTodo={updateTodo}
