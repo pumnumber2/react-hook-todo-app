@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TextField } from '@material-ui/core';
 import textInputHook from '../customHook/useInputState';
-const EditTodoForm = ({ name, updateTodo, toggle, id }) => {
+import { DispatchContext } from './contexts/TodoContext';
+const EditTodoForm = ({ name, toggle, id }) => {
+  const dispatch = useContext(DispatchContext);
   const [value, handleChange, reset] = textInputHook(name);
   const submitNewName = (e) => {
     e.preventDefault();
-    updateTodo(id, value);
+    dispatch({ type: 'UPDATE', id, name: value });
     reset();
     toggle();
   };

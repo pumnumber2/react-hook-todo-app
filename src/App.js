@@ -1,10 +1,15 @@
+import React from 'react';
 import './App.css';
-// import TodoApp from './TodoApp/TodoApp';
-import ThemeForm from './ThemeForm/ThemeFormApp';
+import TodoApp from './TodoApp/TodoApp';
+// import ThemeForm from './ThemeForm/ThemeFormApp';
+// import FirstReducer from './FirstReducer/FirstReducer';
+
 
 function App() {
   return (
-    <ThemeForm />
+    // <ThemeForm />
+    <TodoApp />
+    // <FirstReducer />
   );
 }
 

@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { TextField, Paper } from '@material-ui/core';
 import textInputHook from '../customHook/useInputState';
+import { DispatchContext } from './contexts/TodoContext'
 
-const TodoForm = ({ addItem }) => {
+const TodoForm = () => {
+  const dispatch = useContext(DispatchContext);
   const [value, handleChange, reset] = textInputHook();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addItem(value);
+    dispatch({ type: 'ADD', text: value });
     reset();
   };
-
+  console.log('form rerender');
   return (
     <Paper className="add-todo-form-container">
       <form onSubmit={onSubmit}>
