@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment, useContext, memo } from 'react';
 import { ListItem, ListItemText, Checkbox, IconButton, ListItemSecondaryAction } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
@@ -38,4 +38,4 @@ const Todo = ({ id, name: task, completed }) => {
   );
 };
 
-export default Todo;
+export default memo(Todo);

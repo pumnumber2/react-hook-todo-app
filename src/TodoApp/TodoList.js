@@ -17,7 +17,6 @@ const TodoList = () => {
       </Fragment>
     );
   });
-  console.log('list rerender');
   return list.length ? (
     <Paper>
       <List>

@@ -12,7 +12,6 @@ const TodoForm = () => {
     dispatch({ type: 'ADD', text: value });
     reset();
   };
-  console.log('form rerender');
   return (
     <Paper className="add-todo-form-container">
       <form onSubmit={onSubmit}>
